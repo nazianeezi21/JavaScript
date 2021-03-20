@@ -8,6 +8,16 @@
 </head>
 <body>
     <p id="demo">Lets start </p>
-    <button onclick="document.getElementById('demo').innerHTML='done'">click me</button>
+    <button onclick="commentOpt()">click me</button>
+    <form>
+        <span id="frm_elememt"></span>
+    </form>
+    <script>
+        function commentOpt(){
+            var data = "<button>click click</button>";
+            document.getElementById("frm_elememt").innerHTML=data;
+            console.log("i m in function");
+        }
+    </script>
 </body>
 </html>
