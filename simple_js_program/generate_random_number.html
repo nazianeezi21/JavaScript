@@ -7,10 +7,30 @@
     <title>Random Number</title>
 </head>
 <body>
-    <div id="show_num"></div>
+    <p>Generate Random Number</p>
+    <button id="generator" onclick="generate()">Generate</button>
+    <p id="show_num"></p>
+
+    <!-- random number with in range -->
+    <p>Generate Random Number with in a range</p>
+    <button id="generator_within_range" onclick="generate_range()">Generate</button>
+    <p id="show_num_range"></p>
+
     <script>
-        const num = Math.random();
-        console.log(num);
+        function generate(){
+            const num = Math.random();
+            document.getElementById('show_num').innerHTML=num;
+
+        }
+        //range:1 to 10</p>
+        //Math.random() * (highestNumber - lowestNumber) + lowestNumber</p>
+        function generate_range(){
+            var num = Math.random();
+            num = num*(10-1)+1;
+            num = Math.floor(num);
+            document.getElementById('show_num_range').innerHTML=num;
+
+        }
     </script>
 </body>
 </html>
